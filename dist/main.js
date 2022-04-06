@@ -1,1 +1,1 @@
-console.log("test");
+(()=>{"use strict";(()=>{const e=document.querySelector("#newProjectBtn"),t=document.getElementById("myModal"),l=document.getElementsByClassName("close")[0];return{modalDisplay:function(){e.addEventListener("click",(()=>{t.style.display="block"})),l.addEventListener("click",(()=>{t.style.display="none"}))}}})().modalDisplay()})();
