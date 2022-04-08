@@ -1,8 +1,10 @@
-const display = (() => {
-    const newProjectBtn = document.querySelector("#newProjectBtn");
-    const modal = document.getElementById("myModal");
-    const span = document.getElementsByClassName("close")[0];
+import projects from "./projects";
 
+const newProjectBtn = document.querySelector("#newProjectBtn");
+const modal = document.getElementById("myModal");
+const span = document.getElementsByClassName("close")[0];
+
+function display() {
     function modalDisplay() {
         newProjectBtn.addEventListener("click", () => {
             modal.style.display = "block";
@@ -13,7 +15,18 @@ const display = (() => {
         });
     }
 
-    return { modalDisplay };
-})();
+    function projectDisplay() {
+        const addBtn = document.querySelector("#addBtn");
 
-export default display;
+        addBtn.addEventListener("click", () => {
+            const title = document.querySelector("#title").value;
+            projects.addProjectToStorage(title);
+        });
+    }
+
+    return { modalDisplay, projectDisplay };
+}
+
+const displays = display();
+
+export default displays;
