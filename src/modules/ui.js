@@ -17,10 +17,23 @@ function display() {
 
     function projectDisplay() {
         const addBtn = document.querySelector("#addBtn");
+        const projectList = document.querySelector(".nav-menu");
+
+        // projects.projectStorage.forEach((element) => {
+        //     const projectItem = document.createElement("li");
+        //     projectItem.className = "projectItem";
+        //     projectItem.textContent = element;
+        //     projectList.appendChild(projectItem);
+        // });
 
         addBtn.addEventListener("click", () => {
             const title = document.querySelector("#title").value;
+            const projectItem = document.createElement("li");
+            projectItem.className = "projectItem";
+            projectItem.textContent = title;
+
             projects.addProjectToStorage(title);
+            projectList.appendChild(projectItem);
         });
     }
 

@@ -1,5 +1,6 @@
 const project = () => {
     let projectStorage = [];
+    let newProject;
 
     function createProject(title) {
         return {
@@ -8,15 +9,10 @@ const project = () => {
     }
 
     function addProjectToStorage(title) {
-        let newProject = createProject(title);
+        newProject = createProject(title);
         projectStorage.push(newProject);
         console.log(projectStorage);
     }
-
-    // function displayProject() {
-    //     let element = projectStorage.length - 1
-
-    // }
 
     return { addProjectToStorage };
 };
