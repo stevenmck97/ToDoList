@@ -1,15 +1,16 @@
 const project = () => {
     let projectStorage = [];
-    let newProject;
+    // let newProject;
 
     function createProject(title) {
         return {
             title: title,
+            tasks: [],
         };
     }
 
     function addProjectToStorage(title) {
-        newProject = createProject(title);
+        let newProject = createProject(title);
         projectStorage.push(newProject);
         console.log(projectStorage);
     }

@@ -1,11 +1,11 @@
 import projects from "./projects";
 
-const newProjectBtn = document.querySelector("#newProjectBtn");
-const modal = document.getElementById("myModal");
-const span = document.getElementsByClassName("close")[0];
-
 function display() {
     function modalDisplay() {
+        const newProjectBtn = document.querySelector("#newProjectBtn");
+        const modal = document.getElementById("myModal");
+        const span = document.getElementsByClassName("close")[0];
+
         newProjectBtn.addEventListener("click", () => {
             modal.style.display = "block";
         });
@@ -34,6 +34,16 @@ function display() {
 
             projects.addProjectToStorage(title);
             projectList.appendChild(projectItem);
+
+            const projectView = document.querySelector(".projects");
+
+            const taskBtn = document.createElement("button");
+            taskBtn.className = "addTaskBtn";
+            taskBtn.textContent = "Add Task";
+            taskBtn.addEventListener("click", () => {
+                alert("test");
+            });
+            projectView.appendChild(taskBtn);
         });
     }
 

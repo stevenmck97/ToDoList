@@ -32,7 +32,8 @@ body {
     list-style-type: none;
 }
 
-#newProjectBtn:hover {
+#newProjectBtn:hover,
+.projectItem:hover {
     cursor: pointer;
     background-color: #b3b3b3;
 }
